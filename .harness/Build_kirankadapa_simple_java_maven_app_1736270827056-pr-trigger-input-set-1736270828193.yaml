@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_kirankadapa_simple_java_maven_app_1736270827056-pr-trigger-input-set
+  identifier: Build_kirankadapa_simple_java_maven_app_1736270827056prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: pocTest
+  pipeline:
+    identifier: Build_kirankadapa_simple_java_maven_app_1736270827056
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
