@@ -1,0 +1,33 @@
+pipeline:
+  name: Build simple-java-maven-app
+  identifier: Build_kirankadapa_simple_java_maven_app_1736270827056
+  projectIdentifier: pocTest
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        type: CI
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Echo Welcome Message
+                  identifier: Echo_Welcome_Message
+                  spec:
+                    shell: Sh
+                    command: echo "Welcome to Harness CI"
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Docker
+            spec: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github
+        repoName: kirankadapa/simple-java-maven-app
+        build: <+input>
