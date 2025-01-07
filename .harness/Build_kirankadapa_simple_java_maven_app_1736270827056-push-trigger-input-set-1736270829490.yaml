@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_kirankadapa_simple_java_maven_app_1736270827056-push-trigger-input-set
+  identifier: Build_kirankadapa_simple_java_maven_app_1736270827056pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: pocTest
+  pipeline:
+    identifier: Build_kirankadapa_simple_java_maven_app_1736270827056
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
