@@ -20,16 +20,16 @@ pipeline:
           execution:
             steps:
               - step:
-                  identifier: echo
-                  name: echo
+                  identifier: maven
+                  name: maven
                   spec:
-                    command: echo hello world
+                    command: mvn -B -DskipTests clean package
                   timeout: ""
                   type: Run
           platform:
-            arch: Amd64
             os: Linux
+            arch: Amd64
           runtime:
-            spec: {}
             type: Docker
+            spec: {}
         type: CI
