@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'maven:3.9.0'
-            args '-v C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\maven:/workspace'
+            args '-v //c/ProgramData/Jenkins/.jenkins/workspace/maven:/workspace -w /workspace'
         }
     }
     stages {
